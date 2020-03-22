@@ -3,9 +3,13 @@ import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-do
 
 import JobSectors from './job-sector/pages/JobSector';
 import NewProfiles from './job-profile/pages/NewProfile';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
+//import NavLinks from '../src/shared/components/Navigation/NavLinks'
 
 const App = () => {
   return <Router>
+    <MainNavigation/>
+    <main>
     <Switch>
     <Route path="/" exact>
     <JobSectors/>
@@ -15,6 +19,7 @@ const App = () => {
     </Route>
     <Redirect to='/' />
     </Switch>
+    </main>
   </Router>;
 }
 

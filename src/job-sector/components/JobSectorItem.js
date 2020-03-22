@@ -4,17 +4,16 @@ import './JobSectorItem.css'
 const JobSectorItem = props => {
     return (
         <li className="user-item">
-            <div className="user-item__content">
-                <div className="user-item__image">
-                    <img src={props.image} alt={props.name} />
+            <div className='user-item__info'><h1 >Explore Job Profiles</h1></div>
+            <div className='user-item__content'>
+                <div className='user-item__image'>
+            
                 </div>
-                <div className="user-item__info"> 
-                  <h2>{props.name}</h2>
+                <div className='user-item__info'> 
+            
                 </div>
             </div>
-
-        </li>
-
+            </li>
     );
 };
  
