@@ -7,20 +7,21 @@ import MainNavigation from './shared/components/Navigation/MainNavigation';
 //import NavLinks from '../src/shared/components/Navigation/NavLinks'
 
 const App = () => {
-  return <Router>
-    <MainNavigation/>
-    <main>
-    <Switch>
-    <Route path="/" exact>
-    <JobSectors/>
-    </Route>
-    <Route path="/jobprofile/new">
-    <NewProfiles/>
-    </Route>
-    <Redirect to='/' />
-    </Switch>
-    </main>
-  </Router>;
+  return <h1>Test ii</h1>;
+  // return <Router>
+  //   <MainNavigation/>
+  //   <main>
+  //   <Switch>
+  //   <Route path="/" exact>
+  //   <JobSectors/>
+  //   </Route>
+  //   <Route path="/jobprofile/new">
+  //   <NewProfiles/>
+  //   </Route>
+  //   <Redirect to='/' />
+  //   </Switch>
+  //   </main>
+  // </Router>;
 }
 
 export default App;
