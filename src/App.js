@@ -6,7 +6,8 @@ import NewProfiles from './job-profile/pages/NewProfile';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 //import NavLinks from '../src/shared/components/Navigation/NavLinks'
 
-const App = () => {
+const App = () => { 
+  console("app.js");
   return <h1>Test ii</h1>;
   // return <Router>
   //   <MainNavigation/>
