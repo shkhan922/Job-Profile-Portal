@@ -10,7 +10,7 @@ const App = () => {
   return <Router>
     <MainNavigation/>
     <main>
-    <Switch>
+    {/* <Switch>
     <Route path="/" exact>
     <JobSectors/>
     </Route>
@@ -18,7 +18,7 @@ const App = () => {
     <NewProfiles/>
     </Route>
     <Redirect to='/' />
-    </Switch>
+    </Switch> */}
     </main>
   </Router>;
 }
