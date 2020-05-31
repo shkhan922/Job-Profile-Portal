@@ -13,7 +13,7 @@ SECRET_KEY = 'k5i$+c^zbm-ivg=(@f(6m*nh_@%xssds(+#q#d=ridefj@to09'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
