@@ -1,10 +1,19 @@
 from django.shortcuts import render
+from .models import Jobsector
 
 def index(request):
-    return render(request, 'index.html', {})
+    queryset = Jobsector.objects.filter(featured=True)
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'index.html', context)
 
 def jobsector(request):
-    return render(request, 'jobsector.html', {})
+    queryset = Jobsector.objects.filter(featured=True)
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'jobsector.html', context)
 
 def jobprofile(request):
     return render(request, 'jobprofile.html', {})
