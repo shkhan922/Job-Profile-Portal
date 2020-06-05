@@ -16,4 +16,8 @@ def jobsector(request):
     return render(request, 'jobsector.html', context)
 
 def jobprofile(request):
-    return render(request, 'jobprofile.html', {})
+     queryset = Jobsector.objects.filter(featured=True)
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'jobprofile.html', context)

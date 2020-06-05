@@ -3,12 +3,14 @@ from django.conf import settings
 from django.urls import path
 from django.conf.urls.static import static
 
-from .views import index, jobsector, jobprofile
+from .views import index, jobsector, jobprofile, login , register
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('jobsector/', jobsector),
     path('jobprofile/', jobprofile),
+    path('login/', login),
+    path('register/', register),
     
 ]
 
