@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
-from jobsector.models import Jobsector
-from jobprofile.models import Jobprofile
+from jobsector.models import Jobsector, Jobcategory, Jobprofile
 from django.contrib.auth.forms import UserCreationForm
-
+from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
  
 from django.contrib import messages
@@ -11,9 +10,9 @@ from .forms import CreateUserForm
 
 
 def index(request):
-    queryset = Jobsector.objects.filter(featured=True)
+    category = Jobcategory.objects.filter(featured=True)
     context = {
-        'object_list': queryset
+        'object_list': category
     }
     return render(request, 'index.html', context)
 
@@ -49,12 +48,15 @@ def register(request):
     return render(request, 'register.html', context)
 
 
-def jobsector(request):
-    queryset = Jobprofile.objects.filter(featured=True)
-    context = {
-        'object_list': queryset
-    }
+def jobsector_list(request,slug):
+    category1= Jobcategory.objects.filter(title__startswith=slug).values_list('pk', flat=True)
+    for i in category1:
+        print(i)
+    jobs= Jobsector.objects.filter(category=i)
+
+    context={'jobs':jobs}
     return render(request, 'jobsector.html', context)
+   #return HttpResponse('<h1> to see the response {} </h1>'.format(category))
 
 
 def jobprofile(request):
