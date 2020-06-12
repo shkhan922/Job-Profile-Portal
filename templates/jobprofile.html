@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% load static %} {% block content %} {% for obj in object_list %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+{% for obj in object_list %}
 <div class="heading-main">
     <div class="container">
         <div class="row">
@@ -13,9 +14,25 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
+                <h5>Summary</h5>
                 <div class="detail-page">
-                    <p> {{ obj.overview }}</p>
-
+                    <p> {{ obj.summary }}</p>
+                </div>
+                <h5>Job Decription</h5>
+                <div class="detail-page">
+                    <p> {{ obj.job_description }}</p>
+                </div>
+                <h5>Salary</h5>
+                <div class="detail-page">
+                    <p> {{ obj.salary }}</p>
+                </div>
+                <h5>Responsibilties</h5>
+                <div class="detail-page">
+                    <p> {{ obj.responsibilties }}</p>
+                </div>
+                <h5>Qualification</h5>
+                <div class="detail-page">
+                    <p> {{ obj.qualification }}</p>
                 </div>
             </div>
             {% endfor %}

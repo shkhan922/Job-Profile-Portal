@@ -25,10 +25,16 @@ class Jobsector(models.Model):
 # Model for Job Profile
 
 class Jobprofile(models.Model):
-    title_main= models.CharField(max_length=100)
     title = models.CharField(max_length=100)
-    overview = models.TextField()
-    thumbnail = models.ImageField()
+    summary = models.TextField()
+    job_description = models.TextField()
+    salary = models.TextField()
+    responsibilties = models.TextField()
+    qualification = models.TextField()
+    skills = models.TextField()
+    hiring = models.TextField()
+    Coaching_institution = models.TextField()
+    locations = models.TextField()
     featured = models.BooleanField()
 
     def __str__(self):
