@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import Jobsector, Jobcategory, Jobprofile
+from .models import Jobsectors, Jobprofiles
 
-admin.site.register(Jobsector)
-admin.site.register(Jobcategory)
-admin.site.register(Jobprofile)
+admin.site.register(Jobsectors)
+admin.site.register(Jobprofiles)

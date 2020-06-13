@@ -5,13 +5,13 @@ from django.conf.urls.static import static
 
 from . import views
 
-from .views import index, jobsector_list, jobprofile, loginPage , register
+from .views import index, jobsector_list, jobprofile_details, loginPage , register
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
    # path('jobsector_list/<str:job_cat>/', views.jobsector_list, name="jobsector_list"),
     path('jobsector_list/<str:slug>/', views.jobsector_list, name="jobsector_list"),
-    path('jobprofile/', jobprofile),
+    path('jobprofile_details/<str:slug>', views.jobprofile_details, name="jobprofile_details"),
     path('login/', loginPage),
     path('register/', register),
     

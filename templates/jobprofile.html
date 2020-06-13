@@ -1,38 +1,37 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-{% for obj in object_list %}
 <div class="heading-main">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1> {{ obj.title}} </h1>
+                <h1> Job Profiles for Job Sectors</h1>
             </div>
         </div>
     </div>
 </div>
-
+{% for job in jobs %}
 <div class="center-main">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
                 <h5>Summary</h5>
                 <div class="detail-page">
-                    <p> {{ obj.summary }}</p>
+                    <p> {{ job.summary }}</p>
                 </div>
                 <h5>Job Decription</h5>
                 <div class="detail-page">
-                    <p> {{ obj.job_description }}</p>
+                    <p> {{ job.job_description }}</p>
                 </div>
                 <h5>Salary</h5>
                 <div class="detail-page">
-                    <p> {{ obj.salary }}</p>
+                    <p> {{ job.salary }}</p>
                 </div>
                 <h5>Responsibilties</h5>
                 <div class="detail-page">
-                    <p> {{ obj.responsibilties }}</p>
+                    <p> {{ job.responsibilties }}</p>
                 </div>
                 <h5>Qualification</h5>
                 <div class="detail-page">
-                    <p> {{ obj.qualification }}</p>
+                    <p> {{ job.qualification }}</p>
                 </div>
             </div>
             {% endfor %}
